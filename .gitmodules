@@ -1,0 +1,6 @@
+[submodule "roles/ansible-network.network-engine"]
+	path = roles/ansible-network.network-engine
+	url = https://github.com/ansible-network/network-engine.git
+[submodule "roles/ansible-network.cisco_ios"]
+	path = roles/ansible-network.cisco_ios
+	url = https://github.com/ansible-network/cisco_ios.git
