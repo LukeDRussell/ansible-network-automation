@@ -20,4 +20,6 @@
         requirements: "{{ playbook_dir }}/requirements.txt"
 
     - name: Install ansible role dependencies
-      shell: "ansible-galaxy install -r {{ playbook_dir }}/roles/requirements.yaml -p {{ playbook_dir }}/roles --force"
+      shell: "ansible-galaxy install -r {{ playbook_dir }}/roles/requirements.yaml -p {{ playbook_dir }}/roles"
+      register: result
+      changed_when: "'was installed successfully' in result['stdout']"

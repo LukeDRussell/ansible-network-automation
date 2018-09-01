@@ -1,6 +1,4 @@
-#!/usr/bin/env ansible-playbook
-
----
+#!/usr/bin/env ansible-playbook -k
 
 - name: test ansible-network.cisco_ios
   hosts: 
