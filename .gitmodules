@@ -1,6 +1,0 @@
-[submodule "roles/LukeRussell.cisco_ios"]
-	path = roles/LukeRussell.cisco_ios
-	url = https://github.com/LukeRussell/cisco_ios
-[submodule "roles/ansible-network.network-engine"]
-	path = roles/ansible-network.network-engine
-	url = https://github.com/ansible-network/network-engine
