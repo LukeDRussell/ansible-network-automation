@@ -1,0 +1,4 @@
+# cisco_ios parsers and functions from Luke's fork
+- src: https://github.com/lukerussell/cisco_ios.git
+  version: devel
+  name: lukerussell.cisco_ios
