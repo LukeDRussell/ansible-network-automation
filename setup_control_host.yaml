@@ -1,12 +1,11 @@
 #!/usr/bin/env ansible-playbook
-
 ---
 
 - name: Setup the ansible control host for use with this repo
   hosts: localhost
   tasks:
 
-    - name: create required directories
+    - name: create required directories to keep the repo directory clean
       file:
         path: "~/.ansible/{{ item }}"
         serole: undefined
@@ -19,7 +18,7 @@
       pip:
         requirements: "{{ playbook_dir }}/requirements.txt"
 
-    - name: Install ansible role dependencies
-      shell: "ansible-galaxy install -r {{ playbook_dir }}/roles/requirements.yaml -p {{ playbook_dir }}/roles"
+    - name: Install ansible role dependencies like AWX
+      shell: "ansible-galaxy install -r {{ playbook_dir }}/roles/requirements.yaml -p {{ playbook_dir }}/roles --force"
       register: result
       changed_when: "'was installed successfully' in result['stdout']"

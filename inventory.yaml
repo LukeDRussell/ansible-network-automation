@@ -1,12 +1,10 @@
 ---
 
-# NOTE: All hosts are defined in /etc/hosts
+# NOTE: All hosts in this inventory are defined in /etc/hosts
 
 all:
 
   vars:
-    gather_facts: false
-    host_key_checking: false
     ansible_user: admin
     ansible_password: 1234QWer
   
