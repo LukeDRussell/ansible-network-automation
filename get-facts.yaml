@@ -12,7 +12,7 @@
         tasks_from: get_facts
       vars:
         subset: 
-          - all
+          - vrf
 
     - name: Display all facts for each host
       debug:

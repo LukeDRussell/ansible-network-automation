@@ -1,9 +1,4 @@
-# network-engine role for parser library
-- src: https://github.com/ansible-network/network-engine.git
-  version: devel
-  name: ansible-network.network-engine
-
 # cisco_ios parsers and functions from Luke's fork
 - src: https://github.com/lukerussell/cisco_ios.git
-  version: devel
+  version: bgp-dict-refactor
   name: lukerussell.cisco_ios
