@@ -1,3 +1,7 @@
+# Roles
+roles/ansible-network.network-engine
+roles/lukerussell.cisco_ios
+
 # ansible
 *.retry
 *.logs

@@ -4,10 +4,6 @@
 
 all:
 
-  vars:
-    ansible_user: admin
-    ansible_password: 1234QWer
-  
   hosts:
     host.network-lab:
     

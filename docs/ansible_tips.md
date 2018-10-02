@@ -11,7 +11,8 @@ $ ./get-facts.yaml
 To set it up:
 1. Add a shebang and executable to the start of the playbook yaml file
 2. Make the file executable
-3. (optional) Include any other arguments that are always required when running the playbook e.g. `-k` for passing an SSH password to `network_cli` based playbooks
+3. (optional) Include any other arguments that are always required when running the playbook e.g. `-k` for passing an SSH password to `network_cli` based playbooks.
+_Note: Step 3 doesn't work on every distribution i.e. works on MacOS but not on RHEL._
 ```
 #!/usr/bin/env ansible-playbook -k
 chmod +x get-facts.yaml
