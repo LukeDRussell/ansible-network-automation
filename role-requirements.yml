@@ -1,0 +1,5 @@
+- ansible-network.network-engine
+- ansible-network.cisco_ios
+- ansible-network.juniper_junos
+- lukerussell.cisco_ios
+- lukerussell.juniper_junos

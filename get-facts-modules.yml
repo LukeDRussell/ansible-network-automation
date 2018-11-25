@@ -1,0 +1,16 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: gather facts from network nodes
+  hosts:
+    - ios
+    - ios-xe
+
+  tasks:
+
+    - name: collect facts from cisco ios devices using ios_facts
+      ios_facts:
+
+    - name: Display all facts for each host
+      debug:
+        msg: "{{ hostvars[inventory_hostname]['ansible_net_hostname'] }}"

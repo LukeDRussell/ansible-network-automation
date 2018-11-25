@@ -1,0 +1,20 @@
+all:
+
+  hosts:
+    host.network-lab:
+    
+  children:
+
+    ios:
+      vars:
+        ansible_network_os: ios
+        ansible_connection: network_cli
+      hosts:
+        iosxe-1.network-lab:
+        iosl2-2.network-lab:
+        iosl2-3.network-lab:
+
+    junos:
+      vars:
+        ansible_network_os: junos
+        ansible_connection: netconf
