@@ -1,0 +1,4 @@
+---
+
+- name: include network os specific tasks
+  include_tasks: "{{ ansible_network_os }}.yml"

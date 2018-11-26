@@ -1,0 +1,26 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: gather facts from network nodes
+  hosts:
+    - ios-xe
+
+  tasks:
+
+    - name: Use a role to gather facts using ansible modules
+      import_role: 
+        name: get_fact_modules
+
+    - name: Ensure facts.csv is present
+      file:
+        state: touch
+        path: facts.csv
+
+    - name: Save some info facts.csv
+      lineinfile:
+        state: present
+        create: true
+        dest: facts.csv
+        line: "{{ ansible_net_hostname }},{{ansible_net_model}}"
+
+    

@@ -1,16 +1,24 @@
 all:
-
+  vars:
+    ansible_user: admin
+    ansible_password: 1234QWer
   hosts:
     host.network-lab:
     
   children:
+
+    ios-xe:
+      vars:
+        ansible_network_os: ios
+        ansible_connection: network_cli
+      hosts:
+        iosxe-1.network-lab:
 
     ios:
       vars:
         ansible_network_os: ios
         ansible_connection: network_cli
       hosts:
-        iosxe-1.network-lab:
         iosl2-2.network-lab:
         iosl2-3.network-lab:
 
@@ -18,3 +26,5 @@ all:
       vars:
         ansible_network_os: junos
         ansible_connection: netconf
+      hosts:
+        vsrx-4.network-lab:

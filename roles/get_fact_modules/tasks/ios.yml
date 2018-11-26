@@ -1,0 +1,4 @@
+---
+
+- name: gather facts with ios_facts
+  ios_facts:
