@@ -15,12 +15,17 @@
       file:
         state: touch
         path: facts.csv
+      delegate_to: localhost
+      run_once: true
 
     - name: Save some info facts.csv
       lineinfile:
-        state: present
-        create: true
         dest: facts.csv
         line: "{{ ansible_net_hostname }},{{ansible_net_model}}"
+      delegate_to: localhost
 
-    
+    - name: Error when device is running old code
+      assert:
+        that: 
+          - ansible_net_memfree_mb > '400000'
+        msg: 'Device is running low on memory'
