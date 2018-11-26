@@ -1,6 +1,12 @@
-# ansible
+# IDE
+.vscode/
+
+# Ansible
+*.log
 *.retry
-*.logs
+*.swp
+!*.gitkeep
+ansible.cfg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -8,7 +14,7 @@ __pycache__/
 *$py.class
 
 # C extensions
-*.s
+*.so
 
 # Distribution / packaging
 .Python
@@ -18,8 +24,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-!roles/*/lib
 lib64/
 parts/
 sdist/
